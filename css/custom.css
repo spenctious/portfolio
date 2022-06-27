@@ -1,0 +1,25 @@
+/* custom colours - all related shades */
+:root {
+  --custom-color-1: #061826;
+  --custom-color-2: #11436a;
+  --custom-color-3: #1a659e;
+  --custom-color-4: #a7d1f1;
+  --custom-color-5: #dcedf9;
+  --custom-color-6: #edf6fc;
+}
+
+/* background colour classes */
+.bg-main-1 { background-color: var(--custom-color-1) !important; }
+.bg-main-2 { background-color: var(--custom-color-2) !important; }
+.bg-main-3 { background-color: var(--custom-color-3) !important; }
+.bg-main-4 { background-color: var(--custom-color-4) !important; }
+.bg-main-5 { background-color: var(--custom-color-5) !important; }
+.bg-main-6 { background-color: var(--custom-color-6) !important; }
+
+/* text colour classes */
+.text-main-1 { color: var(--custom-color-1) !important; }
+.text-main-2 { color: var(--custom-color-2) !important; }
+.text-main-3 { color: var(--custom-color-3) !important; }
+.text-main-4 { color: var(--custom-color-4) !important; }
+.text-main-5 { color: var(--custom-color-5) !important; }
+.text-main-6 { color: var(--custom-color-6) !important; }
