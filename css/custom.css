@@ -23,3 +23,9 @@
 .text-main-4 { color: var(--custom-color-4) !important; }
 .text-main-5 { color: var(--custom-color-5) !important; }
 .text-main-6 { color: var(--custom-color-6) !important; }
+
+/* icon links */
+.social-media a {
+  color: inherit; 
+  text-decoration: none; 
+}
