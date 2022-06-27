@@ -37,3 +37,12 @@
   top: -3.6rem;
   visibility: hidden;
 }
+
+/* bootstrap right caret fill icon as list bullet in skills lists */
+.skill-list li:before {
+  content: "\F231";
+  font-family: 'bootstrap-icons';
+  float: left;
+  padding-right: 14px;
+  color: var(--custom-color-2);
+}
