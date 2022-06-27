@@ -19,7 +19,47 @@
 </head>
 <body>
   <header>
-    <p>Placeholder: Header</p>
+    <nav class="navbar navbar-expand-lg bg-main-1 navbar-dark fixed-top">
+      <div class="container">
+        <a href="index.html" class="navbar-brand">Robert Anstey</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainMenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#portfolio" class="nav-link">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a href="#aboutMe" class="nav-link">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                CV
+              </a>
+              <ul class="dropdown-menu bg-main-1 dropdown-menu-dark " aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" href="#skills">Skills</a></li>
+                <li><a class="dropdown-item" href="#experience">Experience</a></li>
+                <li><a class="dropdown-item" href="#education">Education</a></li>
+                <li><a class="dropdown-item" href="#">CV (PDF)</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   </header>
 
   <!-- portfolio -->
