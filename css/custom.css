@@ -53,3 +53,19 @@
   margin: 1rem;
   display: block;
 }
+
+/* positioning and styling of the education card icons */
+.edu-icon-holder {
+  width: 60px;
+  height: 60px;
+  top: -30px;
+  left: 50%;
+  margin-left: -30px;
+}
+
+.edu-icon-holder img {
+  vertical-align: middle;
+  transform: translateY(50%);
+  height: 30px;
+  filter: invert(100%);
+}
