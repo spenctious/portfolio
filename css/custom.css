@@ -46,3 +46,10 @@
   padding-right: 14px;
   color: var(--custom-color-2);
 }
+
+/* size company icons appropriately */
+.business-icons img {
+  height: 3rem;
+  margin: 1rem;
+  display: block;
+}
