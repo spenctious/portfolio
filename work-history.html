@@ -203,11 +203,53 @@
       </div>
     </footer>
 
+    <!-- floating scroll to top button -->
+    <button
+    type="button"
+    class="btn btn-dark btn-floating btn-lg bg-main-3 border-0"
+    id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      /**** Scroll to top functionality ****/
+
+      // define the scroll function
+      window.onscroll = function() {
+        scrollFunction();
+      };
+
+      // get the scroll button
+      let scrollToTopButton = document.getElementById("btn-back-to-top");
+
+      // only show the button when the user has scrolled a set distance from the top
+      function scrollFunction() {
+        const SCROLL_TRIGGER_DISTANCE = 20; // pixels
+        if (
+          document.body.scrollTop > SCROLL_TRIGGER_DISTANCE ||
+          document.documentElement.scrollTop > SCROLL_TRIGGER_DISTANCE
+        ) {
+          scrollToTopButton.style.display = "block";
+        } else {
+          scrollToTopButton.style.display = "none";
+        }
+      }
+
+      // listen for clicks and respond by scrolling to the top
+      scrollToTopButton.addEventListener("click", backToTop);
+
+      function backToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
 
   </body>
 </html>
