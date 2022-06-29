@@ -307,6 +307,29 @@
 
           <a class="anchor-point" id="data"></a>
           <h2 class="mt-5 text-main-3">Data</h2>
+          <h4>Internal data</h4>
+          <ul>
+            <li>
+              Once retrieved from the server the app data should be stored
+              locally and only retrieved again if the data version changes.
+            </li>
+            <li>
+              A data wrapper class will allow the raw JSON data to be processed
+              and properly linked so the code consuming the data can be cleaner.
+            </li>
+            <li>
+              Favourites should persist in local data so they are retained
+              between sessions.
+            </li>
+          </ul>
+          <h4>External data</h4>
+          <p>The app aims to integrate external data from a number of sources:</p>
+          <ul>
+            <li>Maps showing the plotted route</li>
+            <li>Weather forecasts</li>
+            <li>Bus timetables</li>
+            <li>Live trail status</li>
+          </ul>
 
           <a class="anchor-point" id="testing"></a>
           <h2 class="mt-5 text-main-3" >Testing</h2>
