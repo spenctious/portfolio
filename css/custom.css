@@ -24,6 +24,34 @@
 .text-main-5 { color: var(--custom-color-5) !important; }
 .text-main-6 { color: var(--custom-color-6) !important; }
 
+/* colours for fake code in main section */
+.syntax     { color: #eb81c6; }
+.comment    { color: #6abe59; }
+.identifier { color: #e9e44f; }
+.parameters { color: #b0e3f8; }
+.brackets   { color: #699edc; }
+.operator   { color: #efecec; }
+
+
+/* size the code block so it stays large but not too large 
+ * while fitting in the available spacee without scrollbars */
+code {
+  font-size: min(4.6vw, 2rem) !important;
+}
+
+/* add a subtle link underline for code but keep original colour
+ * works for any nested spans keeping the innermost span colour */
+code .identifier a { 
+  color: inherit; 
+  text-decoration: underline; 
+  text-decoration-color: rgba(26, 101, 158, 0.7);
+}
+
+/* code underline colour will be that of the enclosing span */
+code a:hover { 
+  text-decoration: underline; 
+}
+
 /* icon links */
 .social-media a {
   color: inherit; 
@@ -70,7 +98,7 @@
   filter: invert(100%);
 }
 
-/* prevent cards from getting too wide and center them */
+/* about section: prevent cards from getting too wide and center them */
 .interests .card {
    max-width: 400px; 
    margin-left: auto;
