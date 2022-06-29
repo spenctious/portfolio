@@ -123,6 +123,11 @@ code a:hover {
   right: 20px;
 }
 
+/* security through obscurity (hopefully) */
+span.monty { unicode-bidi: bidi-override; direction: rtl }
+span.monty.python:before { content:"735896 46" }
+span.monty.python:after { content:"0 :enohP" }
+
 /* on lg viewports size the protfolio buttons to full width
  * as they will be in a narrow column */
  @media (min-width: 992px) {
