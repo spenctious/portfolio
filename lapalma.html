@@ -371,13 +371,78 @@
                   to be non-blocking.
               </p>
             </div>
+          </div>
 
           <a class="anchor-point" id="testing"></a>
           <h2 class="mt-5 text-main-3" >Testing</h2>
+          <p>
+            Testing happens in 3 areas: 
+          </p>
+          <ul>
+            <li>At design stage to ensure basic assumptions hold up</li>
+            <li>When the data is loaded during development (this is a data-driven app and data integrity is crucial)</li>
+            <li>In the target browsers where functionality and layout can be checked</li>
+          </ul>
+          <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#testDetails" aria-expanded="false" aria-controls="collapseExample">
+            Test details
+          </button>
+          <div class="collapse" id="testDetails">
+            <div class="card card-body">
+              <h5><span class="badge text-light bg-success">PASSED</span> Assumption testing</h5>
+              <p>
+                The app makes extensive use of icons most of which will be unknown
+                to users initially. The assumption was that users would explore
+                filters and route detail options and would come to know what the
+                symbols mean through use. Early Figma designs were shared with a
+                typical user and the user was tested to see if they got stuck when
+                they saw icons they didn’t understand or if they would explore. Testing showed
+                users were willing and able to explore and so learn the symbols.
+              </p>
+              <h5><span class="badge text-light bg-success">PASSED</span> Data integrity testing</h5>
+              <p>
+                The data should really be in a database. Manually created JSON files
+                are prone to error so some basic integrity checking at the data
+                layer was needed. A JSON schema would be more rigourous but could
+                not perform referrential integrity checks. The checks implemented
+                tests for the sort of errors that were found to be occuring and
+                causing issues. Data testing is for development use, a flag turns it
+                off for production.
+              </p>
+              <h5><span class="badge text-light bg-success">PASSED</span> Browser testing</h5>
+              <p>
+                The app has been manually tested in:
+                <ul>
+                  <li>Chrome on Windows and Android</li>
+                  <li>Firefox on Windows and Android</li>
+                  <li>Chrome and Safari on iOS and macOS</li>
+                </ul>
+              </p>
+              <h5><span class="badge text-light bg-success">PASSED</span> Mobile friendly</h5>
+              <p>
+                The app is considered mobile-friendly if it passes the <a href="https://search.google.com/test/mobile-friendly">
+                Google Mobile Friendly test</a> 
+              </p>
+              
+              <h5><span class="badge text-dark bg-warning">WARNING</span> Performance</h5>
+              <p>
+                We're looking for <a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a>
+                to return green (scores 90+) for all metrics on mobile.</p>
+              <p>Scores for some pages are a few points shy due to layout shifts (walk detail summary expansion) and the need to load and process the data before painting the page.</p>
+              <p class="ps-2">
+                <span class="badge text-dark bg-warning">81</span> Home page<br/>
+                <span class="badge text-light bg-success">93</span> Forecasts<br/>
+                <span class="badge text-light bg-success">93</span> Tranhsport<br/>
+                <span class="badge text-light bg-success">93</span> Trails<br/>
+                <span class="badge text-light bg-success">94</span> Apps<br/>
+                <span class="badge text-dark bg-warning">88</span> Browse walks<br/>
+                <span class="badge text-dark bg-warning">78</span> Walk details<br/>
+                <span class="badge text-light bg-success">90</span> Browse Places<br/>
+              </p>
+            </div>
+          </div>
 
           <a class="anchor-point" id="conclusions"></a>
           <h2 class="mt-5 text-main-3">Conclusions</h2>
-
         </div>
       </div>
     </div>
