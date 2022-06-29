@@ -330,6 +330,47 @@
             <li>Bus timetables</li>
             <li>Live trail status</li>
           </ul>
+          <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#externalDataDetails" aria-expanded="false" aria-controls="collapseExample">
+            Technical details
+          </button>
+          <div class="collapse" id="externalDataDetails">
+            <div class="card card-body">
+              <h5>Mapping</h5>
+              <p>
+                  The <a href="https://leafletjs.com/">Leaflet</a> javascript
+                  library can be used to plot GPX routes on a map. Given the
+                  relatively limited number of routes though we can leverage the map
+                  builder on
+                  <a href="https://www.gpsvisualizer.com/">GPS Visualizer</a> to get
+                  fully-formed web pages for the maps which can then be linked into
+                  the app in an iFrame. GPS Vizualizer uses Leaflet so we're just
+                  getting the same functionality for less effort. There's some
+                  redundancy in the pages but nothing to concern us.
+              </p>
+              <h5>Forecasts</h5>
+              <p>
+                  AEMet (the Spanish Met office) has a weather API but processing
+                  the returned data would be onerous. There is a better solution
+                  which is to use the widget generator they provide and embed that
+                  in the app. The location of the forecast can be changed by
+                  manipulating the iFrame URL.
+              </p>
+              <h5>Bus timetables</h5>
+              <p>
+                  The bus company website doesn't have a API or even any machine-readable data other than PDFs.
+                  Timetable links terminate in route map images with times embedded as an image. There's
+                  no data to scrape so nothing we can do other than link to these PFDs and images.
+              </p>
+              <h5>Live trail status</h5>
+              <p>
+                  The local council maintains a useful website for the trail network
+                  and there is a page for current trail status information which can
+                  be scraped. The data is paged but the default is 100 items and
+                  there are only 80 or so rows so the one page should have it all.
+                  The page can be slow to load so the web scraping operation should be coded
+                  to be non-blocking.
+              </p>
+            </div>
 
           <a class="anchor-point" id="testing"></a>
           <h2 class="mt-5 text-main-3" >Testing</h2>
