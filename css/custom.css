@@ -104,3 +104,11 @@ code a:hover {
    margin-left: auto;
    margin-right: auto;
 }
+
+/* on lg viewports size the protfolio buttons to full width
+ * as they will be in a narrow column */
+ @media (min-width: 992px) {
+  .project .btn {
+    width: 100% !important;
+  }
+}
