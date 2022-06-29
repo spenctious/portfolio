@@ -550,6 +550,38 @@
             <p class="lead">If you would like to talk to me about a job opportunity or anything else please use the form or give me a call.</p>
           </div>
           <div class="col-md-6">
+            <form 
+              id="contact-form"
+              class="row g-3"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              action="contact-success.html"
+              data-netlify-honeypot="bot-field"
+            >
+              <!-- for the bots -->
+              <input type="hidden" name="bot-field">
+
+              <div class="col-lg-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" name="first-name" class="form-control" id="firstName">
+              </div>
+              <div class="col-lg-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" name="last-name" class="form-control" id="lastName">
+              </div>
+              <div class="col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="email">
+              </div>
+              <div class="col-12">
+                <label for="comments" class="form-label">Comments</label>
+                <textarea name="comments" class="form-control" id="comments" rows="3"></textarea>
+              </div>
+              <div class="col-12">
+                <button id="contact-submit" type="button" class="btn btn-primary me-1">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
