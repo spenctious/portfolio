@@ -105,6 +105,24 @@ code a:hover {
    margin-right: auto;
 }
 
+/* semi-transparent background for carousel card titles to ensure text readability */
+#carouselLaPalma .card-body {
+  background-color: rgba(255,255,255,0.5);
+}
+
+/* reposition carousel nav buttons so they are not over the image and obscured */
+.carousel-control-prev-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.carousel-control-next-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 /* on lg viewports size the protfolio buttons to full width
  * as they will be in a narrow column */
  @media (min-width: 992px) {

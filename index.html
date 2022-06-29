@@ -112,6 +112,36 @@
               <a class="btn btn-primary w-auto" href="lapalma.html" role="button"><i class="bi bi-info-circle pe-2"></i>Details</a>
             </div>
           </div>
+
+          <!-- screenshot slideshow over a blurred background image of the island -->
+          <!-- N.B. backdrop blur is new and not supported by all browsers yet -->
+          <div class="col-lg-9 px-0">
+            <div id="carouselLaPalma" class="carousel carousel-dark slide" data-interval="false" data-ride="carousel" data-pause="hover" style="background-image: url('img/lapalma-title.jpg'); background-size: cover;">
+              <div class="carousel-inner" style="backdrop-filter: blur(2px);">
+                <div class="carousel-item active">
+                  <div class="card d-block w-100 border-0 bg-transparent">
+                    <div class="card-body text-center">
+                      <h4 class="card-title pb-2 px-5">Explore the app</h4>
+                      <p class="card-text fs-5 ">
+                        Discover the best island for walking in the Canaries
+                      </p>
+                    </div>
+                    <div class="card-img-top text-center py-3">
+                      <img src="/img/home-phone.png" class="m-1" style="width: 30%;" alt="App home page on a white iphone cutout">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselLaPalma" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselLaPalma" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>
