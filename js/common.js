@@ -8,12 +8,18 @@ window.onscroll = function() {
   scrollFunction();
 };
 
-// get the scroll button
+// get the scroll button (if present) and add click handler
 let scrollToTopButton = document.getElementById("btn-back-to-top");
+if (scrollToTopButton != null) {
+  scrollToTopButton.addEventListener("click", backToTop);  
+}
+
 
 // only show the button when the user has scrolled a set distance from the top
 function scrollFunction() {
   const SCROLL_TRIGGER_DISTANCE = 20; // pixels
+  if (scrollToTopButton == null) return; // bail if no scroll button
+  
   if (
     document.body.scrollTop > SCROLL_TRIGGER_DISTANCE ||
     document.documentElement.scrollTop > SCROLL_TRIGGER_DISTANCE
@@ -24,8 +30,6 @@ function scrollFunction() {
   }
 }
 
-// listen for clicks and respond by scrolling to the top
-scrollToTopButton.addEventListener("click", backToTop);
 
 function backToTop() {
   document.body.scrollTop = 0;
