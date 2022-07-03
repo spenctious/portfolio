@@ -31,3 +31,19 @@ function backToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+
+
+/**** Automatically collapse expanded menu when menu link selected ****/
+// https://stackoverflow.com/questions/42401606/how-to-hide-collapsible-bootstrap-navbar-on-click
+// Corrected solution from conradfr to include dropdown links
+
+const navLinks = document.querySelectorAll('.nav-item:not(.dropdown), .dropdown-item'); 
+const menuToggle = document.getElementById('mainMenu'); 
+const bsCollapse = new bootstrap.Collapse(menuToggle, {toggle: false}); 
+navLinks.forEach( function(navLink) { 
+  navLink.addEventListener('click', function() {
+    if (menuToggle.classList.contains('show')) { 
+      bsCollapse.toggle(); 
+    } 
+  }); 
+}); 
