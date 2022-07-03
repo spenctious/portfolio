@@ -589,7 +589,7 @@
                 <textarea name="comments" class="form-control" id="comments" rows="3"></textarea>
               </div>
               <div class="col-12">
-                <button id="contact-submit" type="submit" class="btn btn-primary me-1">Submit</button>
+                <button id="contact-submit" type="button" class="btn btn-primary">Submit</button>
               </div>
             </form>
           </div>
@@ -621,6 +621,17 @@
       var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
         return new bootstrap.Tooltip(tooltipTriggerEl)
       })
+
+
+      /**** Clear form on submission ****/
+      const contactForm = document.getElementById("contact-form");
+      document.getElementById("contact-submit").addEventListener(
+        "click", 
+        function handleSubmit(event) {
+          contactForm.submit(); 
+          contactForm.reset(); 
+          return false;
+        });
 
     </script>
   </body>
