@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicons made with https://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2f4fba">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/custom.css" />
+
+    <title>Datasheet: Database | Robert Anstey</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-main-1 navbar-dark fixed-top">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">Robert Anstey</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#aboutMe" class="nav-link">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  CV
+                </a>
+                <ul class="dropdown-menu bg-main-1 dropdown-menu-dark " aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="index.html#skills">Skills</a></li>
+                  <li><a class="dropdown-item" href="index.html#experience">Experience</a></li>
+                  <li><a class="dropdown-item" href="index.html#education">Education</a></li>
+                  <li><a class="dropdown-item" href="Anstey_Robert CV.pdf">CV (PDF)</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5 pt-3">
+      <div class="row">
+
+        <!-- table of contents -->
+        <div class="col-md-3">
+          <div class="stay-put card mt-5 mt-lg-2">
+            <h5 class="card-header">Contents
+              <button 
+                class="btn btn-outline-dark btn-sm float-end d-md-none" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#sidenav-contents" 
+                aria-expanded="false" 
+                aria-controls="collapseExample">
+                Show/Hide
+              </button>
+            </h5>
+            <div class="collapse show" id="sidenav-contents">
+              <div class="card-body py-1">
+                <ul class="list-group list-group-flush" id="content-list">
+                  <a class="list-group-item list-group-item-action" href="#background">Background</a>
+                  <a class="list-group-item list-group-item-action" href="#objectives">Objectives</a>
+                  <!-- <a class="list-group-item list-group-item-action" href="#scope">Scope</a>
+                  <a class="list-group-item list-group-item-action" href="#constraints">Constraints</a>
+                  <a class="list-group-item list-group-item-action" href="#risks">Risks</a>
+                  <a class="list-group-item list-group-item-action" href="#requirements">Requirements</a> -->
+                  <a class="list-group-item list-group-item-action" href="#approach">Approach</a>
+                  <a class="list-group-item list-group-item-action" href="#design">Design</a>
+                  <a class="list-group-item list-group-item-action" href="#data">Data</a>
+                  <a class="list-group-item list-group-item-action" href="#testing">Testing</a>
+                  <a class="list-group-item list-group-item-action" href="#conclusions">Conclusions</a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9 my-4">
+
+          <!-- title -->
+          <a class="anchor-point" id="datasheet-top"></a>
+          <section>
+            <h4 class="mt-5 mt-lg-0"><span class="badge bg-main-2 fw-normal">Project breakdown</span></h4>
+            <h1 class="display-1 mt-5">Database</h1>
+            <h2 class="h1 mb-5">For La Palma for Walkers project</h2>
+          </section>
+
+          <!-- background -->
+          <a class="anchor-point" id="background"></a>
+          <section>
+            <h2 class="mt-5 text-main-3 text-main-3 text-main-3">Background</h2>
+            <p>
+               The <em>La Palma for Walkers</em> app used manually created JSON files to store the data. While JSON was an appropriate choice of data format for app consumption the underlying data was essentially relational leading to issues with data integrity, especially as the data was manually entered. A relational database would be a better choice to store the data. The project was to create and populate such a database and then use stored procedures to generate suitable JSON output for app consumption. 
+            </p>
+          </section>
+
+          <!-- objectives -->
+          <a class="anchor-point" id="objectives"></a>
+          <section>
+            <h2 class="mt-5 text-main-3 text-main-3">Objectives</h2>
+            <ol>
+              <li>
+                <strong>Learning</strong> - Regain old database skills and learn new ones by creating and consuming a simple database.
+              </li>
+              <li>
+                <strong>Improve the code</strong> - Allow the code to be improved by removing unnecessary checks, better filtering through pre-processing and more consistent data handling.
+              </li>
+            </ol>
+          </section>
+
+          <!-- scope -->
+          <!-- <a class="anchor-point" id="scope"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Scope</h2>
+            <p><strong>Out of scope</strong></p>
+            <ul>
+              <li>TBD</li>
+              <li>TBD</li>
+              <li>TBD</li>
+            </ul>
+          </section> -->
+
+          <!-- constraints -->
+          <!-- <a class="anchor-point" id="constraints"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Constraints</h2>
+            <ul>
+              <li><strong>Constraint 1</strong> - TBD.</li>
+              <li><strong>Constraint 2</strong> - TBD.</li>
+            </ul>
+          </section> -->
+
+          <!-- risks -->
+          <!-- <a class="anchor-point" id="risks"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Risks</h2>
+            <ul>
+              <li>TBD.</li>
+              <li>TBD.</li>
+              <li>TBD.</li>
+            </ul>
+          </section> -->
+
+          <!-- requirements -->
+          <!-- <a class="anchor-point" id="requirements"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Requirements</h2>
+            <p>Requirements were specified in user-story format to cover the basic functionality the site had to offer to be useful.</p>
+            <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#fullRequirements" aria-expanded="false" aria-controls="collapseExample">
+              User stories
+            </button>
+            <div class="collapse" id="fullRequirements">
+              <div class="card card-body">
+                <h4>Functional</h4>
+                <p><strong>General</strong></p>
+                <ul>
+                  <li>TBD</li>
+                </ul>
+
+                <h4>Non-functional</h4>
+                <ul>
+                  <li>TBD</li>
+                </ul>
+              </div>
+            </div>
+          </section> -->
+
+          <!-- approach -->
+          <a class="anchor-point" id="approach"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Approach</h2>
+            <ul>
+              <li><strong>SQL Server Express</strong> as the database</li>
+              <li><strong>SSMS</strong> as the main database tool</li>
+              <li><strong>Original JSON file used as input</strong> to a simple website to output flat table files in a delimited format for import into SSMS. Resultant tables to be manually 'wired-up' by adding of relations.</li>
+              <li>Use of <strong>FOR JSON</strong> construct to output JSON from stored procedures</li>
+              <li><strong>PowerShell</strong> for scripting stored procedure execution</li>
+              <li><strong>Azure Data Studio</strong>, Excel and Notepad++ as additional helper tools</li>
+            </ul>
+          </section>
+
+          <!-- design -->
+          <a class="anchor-point" id="design"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Design</h2>
+            <ul>
+              <li>The schema should not be a direct translation from the original JSON file but something more relationally appropriate.</li>
+              <li>Multiple stored procedures to be used to avoid massive unwieldy scripts, each script to be responsible for one of the basic data nodes in the final JSON object.</li>
+              <li>A master stored procedure to be used to stitch it all together as a single JSON object.</li>
+              <li>Manual regeneration of the JSON file. This will allow database updates to be made and tested properly before a new version is published to the wider world. Updates should be rare.</li>
+            </ul>
+            <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#designDetails" aria-expanded="false" aria-controls="collapseExample">
+              Database schema
+            </button>
+            <div class="collapse" id="designDetails">
+              <div class="card card-body">
+                <h4>Database schema</h4>
+                <img src="img/db-schema.png" class="img-fluid" alt="">
+              </div>
+            </div>
+          </section>
+
+          <!-- data -->
+          <a class="anchor-point" id="data"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Data</h2>
+            <h5>Data import</h5>
+            <ul>
+              <li>A simple hacked-together website was created for the one-off task of reading the original JSON data and reconfiguring it in a simple delimited field format.</li>
+              <li>The output was saved as table files and imported using SSMS flat file import options. The resultant tables were then 'wired-up' with relationshipes in the database.</li>
+              <li>The data was restructed to make it more logical and consistent.</li>
+            </ul>
+            <h5>Stored procedures</h5>
+            <p>Each main dataset (routes, locations, Points of Interest (POI) etc.) was given its own stored procedure. The FOR JSON construct was used to output JSON with Azure Data Studio being the tool of choice to create and test the query as this tool can output formatted JSON. Once correct the query was formatted nicely in <a href="https://www.red-gate.com/website/sql-formatter">Redgate's online formatter</a> before being pasted back into SSMS.</p>
+            <p>While main lookups were deferred to the app to keep the source data file to a minimum, some optimisations and changes were made with respect to the original file:</p>
+            <ul>
+              <li>Attributes/categories made more orthogonal.</li>
+              <li>Checks to see if any variant has a specified attribute performed in the database and exported as an additional node.</li>
+              <li>Images explicitly named instead of file names being computed.</li>
+            </ul>
+            <h5>App changes</h5>
+            <p>Generating the JSON data from the database and restructuring the output allows for simpler code in the app:</p>
+            <ul>
+              <li>Removal of the integrity checking code - the database now ensures referrential integrity and appropriate data typing.</li>
+              <li>Instead of a seperate data layer the code now simply adds properties (lookups in particular) to the imported data.</li>
+              <li>The data is now loaded fresh each day rather than being based on a version number.</li>
+              <li>More orthogonal handling of the data and some processing being done in database queries allowed the filtering code to be simplified.</li>
+            </ul>
+          </section>
+
+          <!-- testing -->
+          <a class="anchor-point" id="testing"></a>
+          <section>
+            <h2 class="mt-5 text-main-3" >Testing</h2>
+              <h5><span class="badge text-light bg-success">PASSED</span> Data import</h5>
+              <p>Data imported into the database with no referrential errors.</p>
+              <h5><span class="badge text-light bg-success">PASSED</span> Functional changes</h5>
+              <p>The only functional change was on the Browse Places page where results were shown to be sorted by place name as expected (an ORDER BY clause in the stored procedure).</p>
+              <h5><span class="badge text-light bg-danger">FAILED</span> Regression testing</h5>
+              <p>Regression testing failed on filtering. Thanks to the data now being in easily queryable format it was possible to check <strong>what the correct results should be</strong> and it turned out the new code was correct: the fault lay in the old code logic. The old code has been left unchanged for reference.</p>
+            <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#testDetails" aria-expanded="false" aria-controls="collapseExample">
+              Regression details
+            </button>
+            <div class="collapse" id="testDetails">
+              <div class="card card-body">
+                <p class="ps-2">
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes - correct content<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes filtering - General include filters<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes filtering - Special include filters: Favourites<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes filtering - Special include filters: Locations<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes filtering - Special include filters: Short Walks<br/>
+                  <span class="badge text-light bg-danger">FAILED</span> Browse routes filtering - Exclude filters: Warnings<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes - URL parameters<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Route details - correct content<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Route details - launch POI detail<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse POI - correct content<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse POI - filtering<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse POI - related walks<br/>
+                  <span class="badge text-light bg-success">PASSED</span> POI detail - correct content<br/>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- conclusions -->
+          <a class="anchor-point" id="conclusions"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Conclusions</h2>
+            <h5>What worked well</h5>
+            <ul>
+              <li><strong>Creating a throw-away website</strong> to output the data in table format.</li>
+              <li><strong>Testing.</strong> Having the data in a database allowed for better testing.</li>
+              <li><strong>Running the database script from PowerShell</strong> - surprisingly painless in the end.</li>
+            </ul>
+            <h5>What didn't work so well</h5>
+            <ul>
+              <li><strong>Character encoding on both import and export.</strong> Easily fixed but capable of creating odd errors.</li>
+              <li><strong>Importing in flat file format.</strong> Had to resort to using both SSMS options for this, use Excel to diagnose issues and Notepad++ to fix them. Might have been easier.</li>
+            </ul>
+            <h5>Lessons learnt</h5>
+            <ul>
+              <li>The code was quite strongly linked to the input data structure. If the original data layer had been more abstract the changes could have been limited to just the data layer.</li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+      <p class="text-center mb-5"><a class="btn btn-primary" href="javascript:history.back()" role="button">Go back</a></p>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-main-1">
+      <div class="container text-main-6 pt-3 pb-1 align-middle text-center">
+        <p class="social-media fs-5">
+          <a href="https://github.com/spenctious"><i class="bi bi-github px-2"></i></a>
+          <a href="https://www.linkedin.com/in/robanstey/"><i class="bi bi-linkedin"></i></a>        
+        </p>
+      </div>
+    </footer>
+  
+    <!-- floating scroll to top button -->
+    <button
+        type="button"
+        class="btn btn-dark btn-floating btn-lg bg-main-3 border-0"
+        id="btn-back-to-top"
+        >
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/common.js"></script>
+
+  </body>
+</html>
