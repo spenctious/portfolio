@@ -95,10 +95,10 @@
                 <ul class="list-group list-group-flush" id="content-list">
                   <a class="list-group-item list-group-item-action" href="#background">Background</a>
                   <a class="list-group-item list-group-item-action" href="#objectives">Objectives</a>
-                  <a class="list-group-item list-group-item-action" href="#scope">Scope</a>
+                  <!-- <a class="list-group-item list-group-item-action" href="#scope">Scope</a>
                   <a class="list-group-item list-group-item-action" href="#constraints">Constraints</a>
                   <a class="list-group-item list-group-item-action" href="#risks">Risks</a>
-                  <a class="list-group-item list-group-item-action" href="#requirements">Requirements</a>
+                  <a class="list-group-item list-group-item-action" href="#requirements">Requirements</a> -->
                   <a class="list-group-item list-group-item-action" href="#approach">Approach</a>
                   <a class="list-group-item list-group-item-action" href="#design">Design</a>
                   <a class="list-group-item list-group-item-action" href="#data">Data</a>
@@ -125,7 +125,7 @@
           <section>
             <h2 class="mt-5 text-main-3 text-main-3 text-main-3">Background</h2>
             <p>
-               TBD
+               The <em>La Palma for Walkers</em> app used manually created JSON files to store the data. While JSON was an appropriate choice of data format for app consumption the underlying data was essentially relational leading to issues with data integrity, especially as the data was manually entered. A relational database would be a better choice to store the data. The project was to create and populate such a database and then use stored procedures to generate suitable JSON output for app consumption. 
             </p>
           </section>
 
@@ -135,19 +135,16 @@
             <h2 class="mt-5 text-main-3 text-main-3">Objectives</h2>
             <ol>
               <li>
-                <strong>Objective 1</strong> - TBD.
+                <strong>Learning</strong> - Regain old database skills and learn new ones by creating and consuming a simple database.
               </li>
               <li>
-                <strong>Objective 2</strong> - TBD.
-              </li>
-              <li>
-                <strong>Objective 3</strong> - TBD.
+                <strong>Improve the code</strong> - Allow the code to be improved by removing unnecessary checks, better filtering through pre-processing and more consistent data handling.
               </li>
             </ol>
           </section>
 
           <!-- scope -->
-          <a class="anchor-point" id="scope"></a>
+          <!-- <a class="anchor-point" id="scope"></a>
           <section>
             <h2 class="mt-5 text-main-3">Scope</h2>
             <p><strong>Out of scope</strong></p>
@@ -156,20 +153,20 @@
               <li>TBD</li>
               <li>TBD</li>
             </ul>
-          </section>
+          </section> -->
 
           <!-- constraints -->
-          <a class="anchor-point" id="constraints"></a>
+          <!-- <a class="anchor-point" id="constraints"></a>
           <section>
             <h2 class="mt-5 text-main-3">Constraints</h2>
             <ul>
               <li><strong>Constraint 1</strong> - TBD.</li>
               <li><strong>Constraint 2</strong> - TBD.</li>
             </ul>
-          </section>
+          </section> -->
 
           <!-- risks -->
-          <a class="anchor-point" id="risks"></a>
+          <!-- <a class="anchor-point" id="risks"></a>
           <section>
             <h2 class="mt-5 text-main-3">Risks</h2>
             <ul>
@@ -177,10 +174,10 @@
               <li>TBD.</li>
               <li>TBD.</li>
             </ul>
-          </section>
+          </section> -->
 
           <!-- requirements -->
-          <a class="anchor-point" id="requirements"></a>
+          <!-- <a class="anchor-point" id="requirements"></a>
           <section>
             <h2 class="mt-5 text-main-3">Requirements</h2>
             <p>Requirements were specified in user-story format to cover the basic functionality the site had to offer to be useful.</p>
@@ -201,33 +198,39 @@
                 </ul>
               </div>
             </div>
-          </section>
+          </section> -->
 
           <!-- approach -->
           <a class="anchor-point" id="approach"></a>
           <section>
             <h2 class="mt-5 text-main-3">Approach</h2>
-            <p>
-              TBD
-            </p>
+            <ul>
+              <li><strong>SQL Server Express</strong> as the database</li>
+              <li><strong>SSMS</strong> as the main database tool</li>
+              <li><strong>Original JSON file used as input</strong> to a simple website to output flat table files in a delimited format for import into SSMS. Resultant tables to be manually 'wired-up' by adding of relations.</li>
+              <li>Use of <strong>FOR JSON</strong> construct to output JSON from stored procedures</li>
+              <li><strong>PowerShell</strong> for scripting stored procedure execution</li>
+              <li><strong>Azure Data Studio</strong>, Excel and Notepad++ as additional helper tools</li>
+            </ul>
           </section>
 
           <!-- design -->
           <a class="anchor-point" id="design"></a>
           <section>
             <h2 class="mt-5 text-main-3">Design</h2>
-            <p>Main design goals were:</p>
             <ul>
-              <li>TBD</li>
+              <li>The schema should not be a direct translation from the original JSON file but something more relationally appropriate.</li>
+              <li>Multiple stored procedures to be used to avoid massive unwieldy scripts, each script to be responsible for one of the basic data nodes in the final JSON object.</li>
+              <li>A master stored procedure to be used to stitch it all together as a single JSON object.</li>
+              <li>Manual regeneration of the JSON file. This will allow database updates to be made and tested properly before a new version is published to the wider world. Updates should be rare.</li>
             </ul>
             <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#designDetails" aria-expanded="false" aria-controls="collapseExample">
-              Design solutions
+              Database schema
             </button>
             <div class="collapse" id="designDetails">
               <div class="card card-body">
-                <ul>
-                  <li>TBD</li>
-                </ul>
+                <h4>Database schema</h4>
+                <img src="img/db-schema.png" class="img-fluid" alt="">
               </div>
             </div>
           </section>
@@ -236,57 +239,59 @@
           <a class="anchor-point" id="data"></a>
           <section>
             <h2 class="mt-5 text-main-3">Data</h2>
-            <h4>Internal data</h4>
+            <h5>Data import</h5>
             <ul>
-              <li>TBD</li>
+              <li>A simple hacked-together website was created for the one-off task of reading the original JSON data and reconfiguring it in a simple delimited field format.</li>
+              <li>The output was saved as table files and imported using SSMS flat file import options. The resultant tables were then 'wired-up' with relationshipes in the database.</li>
+              <li>The data was restructed to make it more logical and consistent.</li>
             </ul>
-            <h4>External data</h4>
-            <p>The app aims to integrate external data from a number of sources:</p>
+            <h5>Stored procedures</h5>
+            <p>Each main dataset (routes, locations, Points of Interest (POI) etc.) was given its own stored procedure. The FOR JSON construct was used to output JSON with Azure Data Studio being the tool of choice to create and test the query as this tool can output formatted JSON. Once correct the query was formatted nicely in <a href="https://www.red-gate.com/website/sql-formatter">Redgate's online formatter</a> before being pasted back into SSMS.</p>
+            <p>While main lookups were deferred to the app to keep the source data file to a minimum, some optimisations and changes were made with respect to the original file:</p>
             <ul>
-              <li>TBD</li>
+              <li>Attributes/categories made more orthogonal.</li>
+              <li>Checks to see if any variant has a specified attribute performed in the database and exported as an additional node.</li>
+              <li>Images explicitly named instead of file names being computed.</li>
             </ul>
-            <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#externalDataDetails" aria-expanded="false" aria-controls="collapseExample">
-              Technical details
-            </button>
-            <div class="collapse" id="externalDataDetails">
-              <div class="card card-body">
-                <h5>TBD</h5>
-                <p>TBD</p>
-                <h5>TBD</h5>
-                <p>TBD</p>
-              </div>
-            </div>
+            <h5>App changes</h5>
+            <p>Generating the JSON data from the database and restructuring the output allows for simpler code in the app:</p>
+            <ul>
+              <li>Removal of the integrity checking code - the database now ensures referrential integrity and appropriate data typing.</li>
+              <li>Instead of a seperate data layer the code now simply adds properties (lookups in particular) to the imported data.</li>
+              <li>The data is now loaded fresh each day rather than being based on a version number.</li>
+              <li>More orthogonal handling of the data and some processing being done in database queries allowed the filtering code to be simplified.</li>
+            </ul>
           </section>
 
           <!-- testing -->
           <a class="anchor-point" id="testing"></a>
           <section>
             <h2 class="mt-5 text-main-3" >Testing</h2>
-            <p>
-              TBD: 
-            </p>
-            <ul>
-              <li>TBD</li>
-            </ul>
+              <h5><span class="badge text-light bg-success">PASSED</span> Data import</h5>
+              <p>Data imported into the database with no referrential errors.</p>
+              <h5><span class="badge text-light bg-success">PASSED</span> Functional changes</h5>
+              <p>The only functional change was on the Browse Places page where results were shown to be sorted by place name as expected (an ORDER BY clause in the stored procedure).</p>
+              <h5><span class="badge text-light bg-danger">FAILED</span> Regression testing</h5>
+              <p>Regression testing failed on filtering. Thanks to the data now being in easily queryable format it was possible to check <strong>what the correct results should be</strong> and it turned out the new code was correct: the fault lay in the old code logic. The old code has been left unchanged for reference.</p>
             <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#testDetails" aria-expanded="false" aria-controls="collapseExample">
-              Test details
+              Regression details
             </button>
             <div class="collapse" id="testDetails">
               <div class="card card-body">
-                <h5><span class="badge text-light bg-danger">FAILED</span> Performance</h5>
-                <p>
-                  We're looking for <a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a>
-                  to return green (scores 90+) for all metrics on mobile.</p>
-                <p>Scores for some pages are a few points shy due to layout shifts (walk detail summary expansion) and the need to load and process the data before painting the page.</p>
                 <p class="ps-2">
-                  <span class="badge text-light bg-danger">00</span> Home page<br/>
-                  <span class="badge text-light bg-danger">00</span> Forecasts<br/>
-                  <span class="badge text-light bg-danger">00</span> Tranhsport<br/>
-                  <span class="badge text-light bg-danger">00</span> Trails<br/>
-                  <span class="badge text-light bg-danger">00</span> Apps<br/>
-                  <span class="badge text-light bg-danger">00</span> Browse walks<br/>
-                  <span class="badge text-light bg-danger">00</span> Walk details<br/>
-                  <span class="badge text-light bg-danger">00</span> Browse Places<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes - correct content<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes filtering - General include filters<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes filtering - Special include filters: Favourites<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes filtering - Special include filters: Locations<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes filtering - Special include filters: Short Walks<br/>
+                  <span class="badge text-light bg-danger">FAILED</span> Browse routes filtering - Exclude filters: Warnings<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse routes - URL parameters<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Route details - correct content<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Route details - launch POI detail<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse POI - correct content<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse POI - filtering<br/>
+                  <span class="badge text-light bg-success">PASSED</span> Browse POI - related walks<br/>
+                  <span class="badge text-light bg-success">PASSED</span> POI detail - correct content<br/>
                 </p>
               </div>
             </div>
@@ -296,20 +301,20 @@
           <a class="anchor-point" id="conclusions"></a>
           <section>
             <h2 class="mt-5 text-main-3">Conclusions</h2>
-            <h5>What went well</h5>
+            <h5>What worked well</h5>
             <ul>
-              <li><strong>Reason 1.</strong> TBD.</li>
-              <li><strong>Reason 2.</strong> TBD.</li>
+              <li><strong>Creating a throw-away website</strong> to output the data in table format.</li>
+              <li><strong>Testing.</strong> Having the data in a database allowed for better testing.</li>
+              <li><strong>Running the database script from PowerShell</strong> - surprisingly painless in the end.</li>
             </ul>
             <h5>What didn't work so well</h5>
             <ul>
-              <li><strong>Reason 1.</strong> TBD.</li>
-              <li><strong>Reason 2.</strong> TBD.</li>
+              <li><strong>Character encoding on both import and export.</strong> Easily fixed but capable of creating odd errors.</li>
+              <li><strong>Importing in flat file format.</strong> Had to resort to using both SSMS options for this, use Excel to diagnose issues and Notepad++ to fix them. Might have been easier.</li>
             </ul>
             <h5>Lessons learnt</h5>
             <ul>
-              <li><strong>Lesson 1.</strong> TBD.</li>
-              <li><strong>Lesson 2.</strong> TBD.</li>
+              <li>The code was quite strongly linked to the input data structure. If the original data layer had been more abstract the changes could have been limited to just the data layer.</li>
             </ul>
           </section>
 
