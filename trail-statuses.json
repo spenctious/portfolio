@@ -1,0 +1,452 @@
+{
+  "lastScraped": "2022-08-19T15:09:07.7451271+01:00",
+  "result": {
+    "type": "Success",
+    "message": "73 additional page lookups",
+    "detail": "8 anomalies found"
+  },
+  "trails": [
+    {
+      "name": "GR 130 Etapa 1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-130-stage-1/"
+    },
+    {
+      "name": "GR 130 Etapa 2",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-130-stage-2/"
+    },
+    {
+      "name": "GR 130 Etapa 3",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-130-stage-3/"
+    },
+    {
+      "name": "GR 130 Etapa 4",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-130-stage-4/"
+    },
+    {
+      "name": "GR 130 Etapa 5",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-130-stage-5/"
+    },
+    {
+      "name": "GR 130 Etapa 6",
+      "status": "Part open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-130-stage-6/"
+    },
+    {
+      "name": "GR 130 Etapa 7",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-130-stage-7/"
+    },
+    {
+      "name": "GR 130 Etapa 8",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-130-stage-8/"
+    },
+    {
+      "name": "GR 131 Etapa 1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-131-stage-1/"
+    },
+    {
+      "name": "GR 131 Etapa 2",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-131-stage-2/"
+    },
+    {
+      "name": "GR 131 Etapa 3",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/long-distance-footpaths/gr-131-stage-3/"
+    },
+    {
+      "name": "PR LP 01",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-01/"
+    },
+    {
+      "name": "PR LP 02",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-02/"
+    },
+    {
+      "name": "PR LP 02.1",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-02-2/"
+    },
+    {
+      "name": "PR LP 02.2",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-02-2-2/"
+    },
+    {
+      "name": "PR LP 02.3",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-02-3/"
+    },
+    {
+      "name": "PR LP 03",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-03/"
+    },
+    {
+      "name": "PR LP 03.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-03-1-montana-de-tagoja-sc-de-la-palma/"
+    },
+    {
+      "name": "PR LP 03.2",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-03-2/"
+    },
+    {
+      "name": "PR LP 04",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-04/"
+    },
+    {
+      "name": "PR LP 04.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-04-1/"
+    },
+    {
+      "name": "PR LP 05",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-05/"
+    },
+    {
+      "name": "PR LP 05.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-05-1-cubo-de-la-galga/"
+    },
+    {
+      "name": "PR LP 06",
+      "status": "Part open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-06/"
+    },
+    {
+      "name": "PR LP 07",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-07/"
+    },
+    {
+      "name": "PR LP 07.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-07-1-las-cabezadas-los-tilos/"
+    },
+    {
+      "name": "PR LP 08",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-08/"
+    },
+    {
+      "name": "PR LP 09",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-09/"
+    },
+    {
+      "name": "PR LP 09.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-09-1/"
+    },
+    {
+      "name": "PR LP 09.2",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-09-2/"
+    },
+    {
+      "name": "PR LP 10",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-10/"
+    },
+    {
+      "name": "PR LP 11",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-11/"
+    },
+    {
+      "name": "PR LP 11.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/situation-of-the-footpaths/"
+    },
+    {
+      "name": "PR LP 11.2",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/situation-of-the-footpaths/"
+    },
+    {
+      "name": "PR LP 12",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-12/"
+    },
+    {
+      "name": "PR LP 12.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-12-1/"
+    },
+    {
+      "name": "PR LP 12.2",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-12-2/"
+    },
+    {
+      "name": "PR LP 13",
+      "status": "Part open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-13/"
+    },
+    {
+      "name": "PR LP 13.1",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-13-1/"
+    },
+    {
+      "name": "PR LP 13.3",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-13-3/"
+    },
+    {
+      "name": "PR LP 14",
+      "status": "Part open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-14/"
+    },
+    {
+      "name": "PR LP 14.1",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-14-1/"
+    },
+    {
+      "name": "PR LP 15",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-15/"
+    },
+    {
+      "name": "PR LP 16",
+      "status": "Part open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-16/"
+    },
+    {
+      "name": "PR LP 16.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-16-1/"
+    },
+    {
+      "name": "PR LP 17",
+      "status": "Part open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-17/"
+    },
+    {
+      "name": "PR LP 18",
+      "status": "Part open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-18/"
+    },
+    {
+      "name": "PR LP 18.1",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-18-1/"
+    },
+    {
+      "name": "PR LP 18.2",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-18-2/"
+    },
+    {
+      "name": "PR LP 19",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-19/"
+    },
+    {
+      "name": "PR LP 20",
+      "status": "Unknown",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/short-distance-footpaths/pr-lp-20/"
+    },
+    {
+      "name": "SL BB 131",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-bb-131/"
+    },
+    {
+      "name": "SL BB 132",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-bb-132/"
+    },
+    {
+      "name": "SL BL 40",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-bl-40-barlovento/"
+    },
+    {
+      "name": "SL BL 41",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-bl-41/"
+    },
+    {
+      "name": "SL EP 100",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-ep-100-tacande-pista-de-piedras-blancas/"
+    },
+    {
+      "name": "SL EP 101",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-ep-101-tacande-llanos-del-jable/"
+    },
+    {
+      "name": "SL EP 103",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-ep-103-llanos-del-jable-lavas-de-san-juan/"
+    },
+    {
+      "name": "SL EP 104",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-ep-104/"
+    },
+    {
+      "name": "SL EP 105",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-ep-105/"
+    },
+    {
+      "name": "SL EP 107",
+      "status": "Closed",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-ep-107/"
+    },
+    {
+      "name": "SL FU 110",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-fu-110/"
+    },
+    {
+      "name": "SL FU 111",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-fu-111/"
+    },
+    {
+      "name": "SL FU 112",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-fu-112/"
+    },
+    {
+      "name": "SL PL 20",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-pl-20/"
+    },
+    {
+      "name": "SL SC 14",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-sc-14/"
+    },
+    {
+      "name": "SL TJ 70",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-tj-70/"
+    },
+    {
+      "name": "SL TJ 71",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-tj-71-el-jesus-risco-de-las-pareditas/"
+    },
+    {
+      "name": "SL VG 51",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-vg-51/"
+    },
+    {
+      "name": "SL VG 55",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-vg-55/"
+    },
+    {
+      "name": "SL VM 122",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-vm-122/"
+    },
+    {
+      "name": "SL VM 123",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-vm-123/"
+    },
+    {
+      "name": "SL VM 124",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-vm-124/"
+    },
+    {
+      "name": "SL VM 125",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-vm-125/"
+    },
+    {
+      "name": "SL VM 126",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/list-of-footpaths/local-footpaths/sl-vm-126/"
+    },
+    {
+      "name": "SL PG 60",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/situation-of-the-footpaths/"
+    },
+    {
+      "name": "SL PG 61",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/situation-of-the-footpaths/"
+    },
+    {
+      "name": "SL PG 62",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/situation-of-the-footpaths/"
+    },
+    {
+      "name": "SL PG 63",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/situation-of-the-footpaths/"
+    },
+    {
+      "name": "SL PG 64",
+      "status": "Open",
+      "url": "https://www.senderosdelapalma.es/en/footpaths/situation-of-the-footpaths/"
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "BadRouteLink",
+      "message": "PR LP 11.1",
+      "detail": "http://www.puntagorda.es/wp-content/uploads/2016/05/MercadilloDragos.pdf"
+    },
+    {
+      "type": "BadRouteLink",
+      "message": "PR LP 11.2",
+      "detail": "http://www.puntagorda.es/wp-content/uploads/2016/05/Puerto.pdf"
+    },
+    {
+      "type": "UnreadableStatus",
+      "message": "PR LP 20",
+      "detail": "Cerrado entre Las Goteras y Briestas."
+    },
+    {
+      "type": "BadRouteLink",
+      "message": "SL PG 60",
+      "detail": "http://www.puntagorda.es/wp-content/uploads/2016/05/Venteros.pdf"
+    },
+    {
+      "type": "BadRouteLink",
+      "message": "SL PG 61",
+      "detail": "http://www.puntagorda.es/wp-content/uploads/2016/05/MercaSanMauro.pdf"
+    },
+    {
+      "type": "BadRouteLink",
+      "message": "SL PG 62",
+      "detail": "http://www.puntagorda.es/wp-content/uploads/2016/05/Guti.pdf"
+    },
+    {
+      "type": "BadRouteLink",
+      "message": "SL PG 63",
+      "detail": "https://senderosdelapalma.es//wp-content/uploads/gpx/puntagorda/SLLP63.zip"
+    },
+    {
+      "type": "BadRouteLink",
+      "message": "SL PG 64",
+      "detail": "http://www.puntagorda.es/wp-content/uploads/2016/05/fuentes.pdf"
+    }
+  ]
+}
