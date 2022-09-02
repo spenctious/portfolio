@@ -1,0 +1,10 @@
+{
+  "lastScraped": "0001-01-01T00:00:00",
+  "result": {
+    "type": "DataError",
+    "message": "Trail network probably closed",
+    "detail": "Missing table with id tablepress-14"
+  },
+  "trails": [],
+  "anomalies": []
+}
