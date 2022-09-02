@@ -1,0 +1,22 @@
+{
+  "lastScraped": "2022-08-24T07:50:51.506Z",
+  "result": {
+    "type": "string",
+    "message": "string",
+    "detail": "string"
+  },
+  "trails": [
+    {
+      "name": "string",
+      "status": "string",
+      "url": "string"
+    }
+  ],
+  "anomalies": [
+    {
+      "type": "string",
+      "message": "string",
+      "detail": "string"
+    }
+  ]
+}
