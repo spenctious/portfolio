@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Favicons made with https://realfavicongenerator.net/ -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#2f4fba">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/css/custom.css" />
+
+    <title>Datasheet: API | Robert Anstey</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <nav class="navbar navbar-expand-lg bg-main-1 navbar-dark fixed-top">
+        <div class="container">
+          <a href="index.html" class="navbar-brand">Robert Anstey</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">Home</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#portfolio" class="nav-link">Portfolio</a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#aboutMe" class="nav-link">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  CV
+                </a>
+                <ul class="dropdown-menu bg-main-1 dropdown-menu-dark " aria-labelledby="navbarDropdownMenuLink">
+                  <li><a class="dropdown-item" href="index.html#skills">Skills</a></li>
+                  <li><a class="dropdown-item" href="index.html#experience">Experience</a></li>
+                  <li><a class="dropdown-item" href="index.html#education">Education</a></li>
+                  <li><a class="dropdown-item" href="Anstey_Robert CV.pdf">CV (PDF)</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="index.html#contact" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container mt-5 pt-3">
+      <div class="row">
+
+        <!-- table of contents -->
+        <div class="col-md-3">
+          <div class="stay-put card mt-5 mt-lg-2">
+            <h5 class="card-header">Contents
+              <button 
+                class="btn btn-outline-dark btn-sm float-end d-md-none" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#sidenav-contents" 
+                aria-expanded="false" 
+                aria-controls="collapseExample">
+                Show/Hide
+              </button>
+            </h5>
+            <div class="collapse show" id="sidenav-contents">
+              <div class="card-body py-1">
+                <ul class="list-group list-group-flush" id="content-list">
+                  <a class="list-group-item list-group-item-action" href="#background">Background</a>
+                  <a class="list-group-item list-group-item-action" href="#objectives">Objectives</a>
+                  <a class="list-group-item list-group-item-action" href="#approach">Approach</a>
+                  <a class="list-group-item list-group-item-action" href="#design">Design</a>
+                  <a class="list-group-item list-group-item-action" href="#data">Data</a>
+                  <a class="list-group-item list-group-item-action" href="#testing">Testing</a>
+                  <a class="list-group-item list-group-item-action" href="#technical">Technical</a>
+                  <a class="list-group-item list-group-item-action" href="#conclusions">Conclusions</a>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-9 my-4">
+
+          <!-- title -->
+          <a class="anchor-point" id="datasheet-top"></a>
+          <section>
+            <h4 class="mt-5 mt-lg-0"><span class="badge bg-main-2 fw-normal">Project breakdown</span></h4>
+            <h1 class="display-1 mt-5">Azure API & tests</h1>
+            <h2 class="h1 mb-5">For La Palma for Walkers project</h2>
+          </section>
+
+          <!-- background -->
+          <a class="anchor-point" id="background"></a>
+          <section>
+            <h2 class="mt-5 text-main-3 text-main-3 text-main-3">Background</h2>
+            <p>
+              The local council (Cabildo) on La Palma maintains a website which includes a page for the current trail status of all trails as well as seperate detail pages for most of the trails.
+            </p> 
+            <p>
+              The majority of the walks in the La Palma for Walkers app combine sections from a number of trails and performing a manual check on each of the trails would be very tedious. On the other hand going out on a walk without checking if the trail is open or not could end in a wasted trip. The API simplifies things for the user by allowing the app to do the checking.
+            </p>
+            <p>
+              In the original development of the La Palma for Walkers app a manually generated sample JSON file was created to substitute for the API output which allowed the trail status presentation code to be developed in advance of the API.
+              The return from this API replaces that file with live data.
+            </p>
+          </section>
+
+          <!-- objectives -->
+          <a class="anchor-point" id="objectives"></a>
+          <section>
+            <h2 class="mt-5 text-main-3 text-main-3">Objectives</h2>
+            <ul class="fw-bold">
+              <li>Revive C# skills</li>
+              <li>Refamiliarise myself with Visual Studio</li>
+              <li>Create something server-side</li>
+              <li>Deploy something to the cloud</li>
+              <li>Do some testing</li>
+            </ul>
+          </section>
+
+          <!-- approach -->
+          <a class="anchor-point" id="approach"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Approach</h2>
+            <ul>
+              <li><strong>C# and ASP.NET Core</strong> as the basic technologies</li>
+              <li><strong>Azure</strong> as the cloud host</li>
+              <li><strong>Reasonable robustness</strong> - expectation of errors and appropriate handling</li>
+              <li><strong>Report errors and anomalies</strong> so the caller can decide appropriate responses</li>
+              <li><strong>Grey box testing</strong> - use optional parameters to configure the API so it can read suitably constructed test files</li>
+            </ul>
+          </section>
+
+          <!-- design -->
+          <a class="anchor-point" id="design"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Design</h2>
+            <h5>Serve cached results when possible</h5>
+            <ul>
+              <li>
+                <strong>Complete results</strong> - if less than a day old.
+              </li>
+              <li>
+                <strong>English language links</strong> - these will not change once they are discovered and are expensive to initially obtain.
+              </li>
+            </ul>
+
+            <h5>Handling the source data</h5>
+            <ul>
+              <li><strong>Known errors</strong> in the received data are fixed</li>
+              <li><strong>Translations</strong> and consistency with trail markers is left to the caller (e.g. 'etap' to 'stage' and '01' to '1')</li>
+              <li><strong>Links</strong> should be to the most appropriate page: an English route detail page or the overall status page</li>
+              <li><strong>Report anomalies</strong> but continue with sensible defaults</li>
+              <li><strong>Return useful error information</strong></li>
+            </ul>
+            
+            <h5>Dealing with Spanish links</h5>
+            <p>The status page serves Spanish links which have to be scraped themselves to get the English equivalent. This is needs to be done only once as they can be cached but the initial set of over 70 calls is very slow. The API therefore performs an initial scrape to build the lookup table at start-up.</p>
+          </section>
+
+          <!-- security -->
+          <a class="anchor-point" id="security"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Security</h2>
+            <ul>
+              <li><strong>No authentication</strong> - the API only exposes data that's on a publicly availabe website.</li>
+              <li><strong>CORS</strong> - the API is essentially private to the La Palma for Walkers website so CORS is set to reject other origins.</li>
+            </ul>
+          </section>
+
+          <!-- data -->
+          <a class="anchor-point" id="data"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Data</h2>
+            <h5>Schema</h5>
+            <p>Schema by example from Swagger:</p>
+            <code class="fs-6">
+              <embed src="api-schema.json" type="application/json" height="200" width="100%" class="bg-light border border-secondary">
+            </code>
+
+            <h5 class="pt-3">Responses</h5>
+            <p>Complete list of possible responses and suggested client handling.</p>
+            <button class="btn btn-outline-primary mb-2" type="button" data-bs-toggle="collapse" data-bs-target="#responses" aria-expanded="false" aria-controls="collapseExample">
+              Table of possible responses
+            </button>
+            <div class="collapse" id="responses">
+              <div class="card card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">HTTPS/<br/>Return/<br/>Anomaly</th>
+                        <th scope="col">Situation</th>
+                        <th scope="col">Comments</th>
+                        <th scope="col">Recommended client action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-success">Success</span></p>
+                        </td>
+                        <td>Request made within 1 day of a previously successful call.</td>
+                        <td>
+                          <p>The previous result is returned.</p>
+                        </td>
+                        <td>Process normally.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-success">Success</span></p>
+                        </td>
+                        <td>Status page successfully scraped.</td>
+                        <td>
+                          <p>Returns a list of trail status data along with any anomalies encountered. The result is cached.</p>
+                          <p>Trail statuses are:</p>
+                            <ul>
+                              <li><strong>name:</strong><br />The trail ID (in Spanish)</li>
+                              <li><strong>status:</strong><br />One of: <em>Open</em>, <em>Part open</em> or <em>Closed</em></li>
+                              <li><strong>url:</strong><br />Link to route detail page in English or, if inappropriate or not available, a link to the status page.</li>
+                            </ul>
+                        </td>
+                        <td>Process normally.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p><span class="badge bg-danger">500</span><br/></p>
+                        </td>
+                        <td>Unhandled error</td>
+                        <td>
+                          <p>The call failed. Some internal unrecoverable error was encountered. No data will be returned from the call.</p>
+                        </td>
+                        <td>Create a dummy error return result and use it to direct users to the status page.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-danger">Timeout</span></p>
+                        </td>
+                        <td>Call to status page timed out.</td>
+                        <td>
+                          <p>No status information will be returned.</p>
+                        </td>
+                        <td>Report the error and direct the user to the status page. Possibly suggest refreshing the page to try again.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-danger">Exception</span></p>
+                        </td>
+                        <td>Network error other such fault when trying to access the status page.</td>
+                        <td>
+                          <p>No status information will be returned.</p>
+                        </td>
+                        <td>Report the error and direct the user to the status page.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-danger">DataError</span></p>
+                        </td>
+                        <td>Trail status table not found.</td>
+                        <td>
+                          <p>The trail network is closed (fire risk is very high, extreme bad weather is expected, volcanic interruption...). Some trails may still be open.</p>
+                        </td>
+                        <td>Inform the user the trail network is probably closed and direct them to the status page for more information.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-success">Success</span><br/>
+                            <span class="badge bg-warning text-dark">Unexpected</span>
+                          </p>
+                        </td>
+                        <td>Unable to read link from first column.</td>
+                        <td>
+                          <p>The default trail status page is returned as the URL.</p>
+                        </td>
+                        <td>Ignore and/or log.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-success">Success</span><br/>
+                            <span class="badge bg-warning text-dark">UnrecognisedTrailId</span>
+                          </p>
+                        </td>
+                        <td>Unable to extract the trail ID from the first column.</td>
+                        <td>
+                          <p>'Unrecognised trail' is returned as the trail ID.</p>
+                        </td>
+                        <td>Ignore and/or log. Client code should be prepared for missing trails in the returned results.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-success">Success</span><br/>
+                            <span class="badge bg-warning text-dark">UnreadableStatus</span></p>
+                        </td>
+                        <td>Can't tell for sure if trail is open or not or there's additional information.</td>
+                        <td>
+                          <p>Trail status 'Unknown' returned.</p>
+                        </td>
+                        <td>Direct the user to the status page for more information.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-success">Success</span><br/>
+                            <span class="badge bg-warning text-dark">BadRouteLink</span></p>
+                        </td>
+                        <td>Status page trail link is a PDF or a ZIP file (of the GPX route).</td>
+                        <td>
+                          <p>Link to default status page returned.</p>
+                        </td>
+                        <td>The original link can be obtained from the anomalies list. Clients can accept the link to the status page or offer the user a choice after warning about the nature of the content link.</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-success">Success</span><br/>
+                            <span class="badge bg-warning text-dark">BadRouteLink</span></p>
+                        </td>
+                        <td>Unable to retrieve a link to English language version of the route detail page.</td>
+                        <td>
+                          <p>Link to default status page returned.</p>
+                        </td>
+                        <td>Ignore</td>
+                      </tr>
+  
+                      <tr>
+                        <td>
+                          <p>
+                            <span class="badge bg-success">200</span><br/>
+                            <span class="badge bg-success">Success</span><br/>
+                            <span class="badge bg-warning text-dark">Exception</span></p>
+                        </td>
+                        <td>Problem reading Spanish version of route detail page.</td>
+                        <td>
+                          <p>Link to default status page returned.</p>
+                        </td>
+                        <td>Ignore and/or log.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+              </div>
+            </div>
+
+            <h5 class="pt-3">Example responses</h5>
+            <p>Network open</p>
+            <code class="fs-6">
+              <embed src="response-example-network-open.json" type="application/json" height="200" width="100%" class="bg-light border border-success">
+            </code>
+            <p class="pt-3">Trail network closed</p>
+            <code class="fs-6">
+              <embed src="response-example-network-closed.json" type="application/json" height="200" width="100%" class="bg-light border border-success">
+            </code>
+          </section>
+
+          <!-- testing -->
+          <a class="anchor-point" id="testing"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Testing</h2>
+            <h3>API</h3>
+            <p>
+              The app is tested in grey-box fashion. The optional parameters allow the code to be used with specially constructed web pages that exercise the code in white-box fashion achieving good levels of code coverage while falling just a bit short of the rigour of proper white-box testing. In particular a server 500 error can't be invoked this way.
+            </p>
+
+            <h5>Custom testing app</h5>
+            <p>
+              The testing could perhaps have been performed on something more conventional like <a href="https://www.postman.com/">Postman</a> but since the API requires live web pages to scrape and there is just a single call to make it wasn't considered much more effort to construct a custom test tool with Bootstrap.
+            </p>
+            <p>
+              Note that the API consumes the source code of the site passed to it and requires fully-qualified URLs. This may require a global search-and-replace operation to update the links in the test pages to point the test site which will be running locally on a different port.
+            </p>
+            <p>
+              The custom web pages for scraping typically test a number of scenarios to make sure the API is correctly recognising the target data and not over-matching.
+            </p>
+
+            <h3>Consuming app</h3>
+            <p>The consuming app was tested manually by pointing the trail status URL to a local JSON file which was variously populated with returned values from the API tests and a custom modified response from a successful API call.</p>
+            <p>Additional tests were performed by manipulating the timeout and URL to generate errors outside the scope of the API return value.</p>
+          </section>
+
+          <!-- technical -->
+          <a class="anchor-point" id="technical"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Technical</h2>
+            <ul>
+              <li><strong>Thread safety</strong> - the results cache was implemented as a <strong>lazy thread-safe singleton</strong> and the URL lookup table used <strong>ConcurrentDictionary</strong>. Both these caches are shared across threads and need to be protected.</li>
+              <li><strong>HtmlAgilityPack</strong> - the code used the <strong>HtmlAgilityPack</strong> to parse scraped pages and <strong>XPath</strong> to select elements.</li>
+              <li><strong>Regex</strong> - regular expressions were used to identify trail IDs and specific status patterns. <a href="https://regex101.com/">Regex101</a> proved to be a useful tool for debugging patterns.</li>
+            </ul>
+          </section>
+
+          <!-- conclusions -->
+          <a class="anchor-point" id="conclusions"></a>
+          <section>
+            <h2 class="mt-5 text-main-3">Conclusions</h2>
+            <h5>What worked well</h5>
+            <ul>
+              <li><strong>The scraping</strong><br/>Surprisingly easy and fun to do. The main challenge is coping with the source variability.</li>
+              <li><strong>Deploying to the cloud</strong><br/>Admitedly a simple case but deployment went pretty smoothly.</li>
+            </ul>
+            <h5>What didn't work so well</h5>
+            <ul>
+              <li><strong>Asynchronous scraping</strong><br/>An alternate version of the API was built that created a new asynchronous task to process each row in the table with the code waiting for all tasks to complete before processing the results. The idea was to perform the initial link mapping much quicker by exploring all the links in parallel. In practice it seems that the scraped server queues requests from the same source so no advantage was obtained with this approach.</li>
+              <li><strong>Testing</strong><br/>Although the testing approach worked it did leave the API with additional parameters which it might be better not to expose. The testing also faced a number of restrictions forced by various security policies. It was OK for the purposes of this project but something better for commercial code would be needed.</li>
+            </ul>
+            <h5>Lessons learnt</h5>
+            <ul>
+              <li><strong>Security</strong><br/>At several points the project ran into brick walls caused by security policies. The proof-of-concept approach meant these were discovered before much coding had been completed but any one of them could have derailed the project. A better understanding of the issues and general web security would be beneficial.</li>
+            </ul>
+          </section>
+
+        </div>
+      </div>
+
+      <p class="text-center mb-5"><a class="btn btn-primary" href="javascript:history.back()" role="button">Go back</a></p>
+
+    </div>
+
+    <!-- footer -->
+    <footer class="bg-main-1">
+      <div class="container text-main-6 pt-3 pb-1 align-middle text-center">
+        <p class="social-media fs-5">
+          <a href="https://github.com/spenctious"><i class="bi bi-github px-2"></i></a>
+          <a href="https://www.linkedin.com/in/robanstey/"><i class="bi bi-linkedin"></i></a>        
+        </p>
+      </div>
+    </footer>
+  
+    <!-- floating scroll to top button -->
+    <button
+        type="button"
+        class="btn btn-dark btn-floating btn-lg bg-main-3 border-0"
+        id="btn-back-to-top"
+        >
+        <i class="bi bi-arrow-up-circle"></i>
+    </button>
+
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="js/common.js"></script>
+
+  </body>
+</html>
