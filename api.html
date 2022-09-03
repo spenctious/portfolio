@@ -114,7 +114,7 @@
           <section>
             <h4 class="mt-5 mt-lg-0"><span class="badge bg-main-2 fw-normal">Project breakdown</span></h4>
             <h1 class="display-1 mt-5">Azure API & tests</h1>
-            <h2 class="h1 mb-5">For La Palma for Walkers project</h2>
+            <h2 class="h1 mb-5">For <em>La Palma for Walkers</em> project</h2>
           </section>
 
           <!-- background -->
@@ -125,10 +125,10 @@
               The local council (Cabildo) on La Palma maintains a website which includes a page for the current trail status of all trails as well as seperate detail pages for most of the trails.
             </p> 
             <p>
-              The majority of the walks in the La Palma for Walkers app combine sections from a number of trails and performing a manual check on each of the trails would be very tedious. On the other hand going out on a walk without checking if the trail is open or not could end in a wasted trip. The API simplifies things for the user by allowing the app to do the checking.
+              The majority of the walks in the <em>La Palma for Walkers</em> app combine sections from a number of trails and performing a manual check on each of the trails would be very tedious. On the other hand going out on a walk without checking if the trail is open or not could end in a wasted trip. The API simplifies things for the user by allowing the app to do the checking.
             </p>
             <p>
-              In the original development of the La Palma for Walkers app a manually generated sample JSON file was created to substitute for the API output which allowed the trail status presentation code to be developed in advance of the API.
+              In the original development of the <em>La Palma for Walkers</em> app a manually generated sample JSON file was created to substitute for the API output which allowed the trail status presentation code to be developed in advance of the API.
               The return from this API replaces that file with live data.
             </p>
           </section>
@@ -183,7 +183,8 @@
             </ul>
             
             <h5>Dealing with Spanish links</h5>
-            <p>The status page serves Spanish links which have to be scraped themselves to get the English equivalent. This is needs to be done only once as they can be cached but the initial set of over 70 calls is very slow. The API therefore performs an initial scrape to build the lookup table at start-up.</p>
+            <p>The status page serves Spanish links which have to be scraped themselves to get the English equivalent. This needs to be done only once as they can be cached but the initial set of over 70 calls is very slow. The API will attempt to load a saved version of the table and if this fails (the file has yet to be created) will perform an initial scrape to build the table.</p>
+            <p>Any additional lookups performed (for example, a route that perviously didn't have a proper detail page now does) will cause the file to be updated.</p>
           </section>
 
           <!-- security -->
@@ -192,7 +193,7 @@
             <h2 class="mt-5 text-main-3">Security</h2>
             <ul>
               <li><strong>No authentication</strong> - the API only exposes data that's on a publicly availabe website.</li>
-              <li><strong>CORS</strong> - the API is essentially private to the La Palma for Walkers website so CORS is set to reject other origins.</li>
+              <li><strong>CORS</strong> - the API is essentially private to the <em>La Palma for Walkers</em> website so CORS is set to reject other origins.</li>
             </ul>
           </section>
 
@@ -438,9 +439,12 @@
           <section>
             <h2 class="mt-5 text-main-3">Technical</h2>
             <ul>
-              <li><strong>Thread safety</strong> - the results cache was implemented as a <strong>lazy thread-safe singleton</strong> and the URL lookup table used <strong>ConcurrentDictionary</strong>. Both these caches are shared across threads and need to be protected.</li>
-              <li><strong>HtmlAgilityPack</strong> - the code used the <strong>HtmlAgilityPack</strong> to parse scraped pages and <strong>XPath</strong> to select elements.</li>
-              <li><strong>Regex</strong> - regular expressions were used to identify trail IDs and specific status patterns. <a href="https://regex101.com/">Regex101</a> proved to be a useful tool for debugging patterns.</li>
+              <li><strong>Thread safety</strong><br />
+                The results cache was implemented as a <strong>lazy thread-safe singleton</strong> and the URL lookup table uses <strong>ConcurrentDictionary</strong> with locks on the loading and saving to file methods. The loading method is only called before the service is made available to clients so overwriting the table while another thread is trying to access it should not be possible. Both these caches are shared across threads and need to be protected.</li>
+              <li><strong>Dependencies</strong><br />
+                The code used the <strong>HtmlAgilityPack</strong> to parse scraped pages and <strong>XPath</strong> to select elements. Data serialization to/from file was performed through <strong>Json.Net</strong>.</li>
+              <li><strong>Regex</strong><br />
+                Regular expressions were used to identify trail IDs and specific status patterns. <a href="https://regex101.com/">Regex101</a> proved to be a useful tool for debugging patterns.</li>
             </ul>
           </section>
 
