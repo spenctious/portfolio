@@ -440,7 +440,7 @@
             <h2 class="mt-5 text-main-3">Technical</h2>
             <ul>
               <li><strong>Thread safety</strong><br />
-                The results cache was implemented as a <strong>lazy thread-safe singleton</strong> and the URL lookup table uses <strong>ConcurrentDictionary</strong> with locks on the loading and saving to file methods. The loading method is only called before the service is made available to clients so overwriting the table while another thread is trying to access it should not be possible. Both these caches are shared across threads and need to be protected.</li>
+                The results cache was implemented as a <strong>lazy thread-safe singleton</strong> with locks on the getting/setting of the value. The URL lookup table uses <strong>ConcurrentDictionary</strong> with locks on the loading and saving to file methods. The loading method is only called before the service is made available to clients so overwriting the table while another thread is trying to access it should not be possible. Both these caches are shared across threads and need to be protected.</li>
               <li><strong>Dependencies</strong><br />
                 The code used the <strong>HtmlAgilityPack</strong> to parse scraped pages and <strong>XPath</strong> to select elements. Data serialization to/from file was performed through <strong>Json.Net</strong>.</li>
               <li><strong>Regex</strong><br />
